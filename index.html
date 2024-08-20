@@ -20,14 +20,14 @@
     <script src="script.js"></script>
     <script src="script2.js"></script>
 
-
-
-    <button onclick="openPopup()">funny moment</button>
+    <button onclick="openMultiplePopups()">funny moment</button>
 
     <script>
-        function openPopup() {
-            const newWindow = window.open("", "newWindow", "width=400,height=300");
-            newWindow.document.write("<p>This is a new popup window!</p>");
+        function openMultiplePopups() {
+            for (let i = 1; i <= 10; i++) {
+                const newWindow = window.open("", "newWindow" + i, "width=400,height=300");
+                newWindow.document.write("<p>This is popup window number " + i + "!</p>");
+            }
         }
     </script>
     
